@@ -1,0 +1,66 @@
+Q.2 Write a Program to find cubes of all elements from a given 2D array using Pointer with UDF.
+For example,
+Input:
+Enter array's size: 2
+
+Enter array elements:
+a[0][0] = 3
+a[0][1] = 2
+a[1][0] = 5
+a[1][1] = 4
+
+Output:
+Cubes of all elements:
+27  8
+125 64
+
+INPUT==
+#include <stdio.h>
+
+int cube(int *num){
+    return (*num) * (*num) *  (*num);
+}
+
+int main() {
+   int n,m;
+   printf("enter array's size:");
+   scanf("%d",&n);
+    printf("enter array's size:");
+   scanf("%d",&m);
+   printf("Enter array elements:\n");
+   
+   int a[n][m];
+   for(int i=0; i<n; i++){
+       for(int j=0; j<m; j++){
+       printf("a[%d][%d]=",i,j);
+       scanf("%d",&a[i][j]);
+   }
+}
+
+  for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+            int c=cube(&(a[i][j]));
+            printf("\n%d",c);
+        }
+  }
+
+    return 0;
+}
+
+
+OUTPUT==
+/tmp/S9XZ6birAL.o
+enter array's size:2
+enter array's size:2
+Enter array elements:
+a[0][0]=3
+a[0][1]=2
+a[1][0]=5
+a[1][1]=4
+
+27
+8
+125
+64
+
+=== Code Execution Successful ===
